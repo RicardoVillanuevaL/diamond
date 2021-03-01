@@ -1,4 +1,6 @@
+import 'package:diamond_services/src/Pokemon/views/DashBoardPokemon.dart';
 import 'package:diamond_services/src/Splash_Login_DashBoard/services/funtions.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -49,7 +51,10 @@ class _LoginPageState extends State<LoginPage> {
             ButtonTransparentBorder(
                 'Conectece con Twitter', logoTwitter, () {}),
             SizedBox(height: 10),
-            ButtonTransparentBorder('Registresé con su correo', '', () {}),
+            ButtonTransparentBorder('Registresé con su correo', '', () {
+              Navigator.of(context).push(CupertinoPageRoute(
+                  builder: (BuildContext context) => DashBoardPokemon()));
+            }),
             SizedBox(height: 30),
             RichText(
                 text: TextSpan(
